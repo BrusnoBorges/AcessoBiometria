@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using XnaFan.ImageComparison;
+using AcessoBiometria.Model;
 
 namespace AcessoBiometria.Controller
 {
@@ -14,11 +15,11 @@ namespace AcessoBiometria.Controller
         string imgCompare;
 
         public bool Acesso(string caminho, string caminho2)
-        {           
+        {                     
             return Compara(caminho, caminho2);
         }
 
-        public bool Cadastro()
+        public bool Cadastro(string caminho)
         {
             return false;
         }

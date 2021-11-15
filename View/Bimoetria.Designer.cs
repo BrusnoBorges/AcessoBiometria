@@ -50,6 +50,7 @@ namespace AcessoBiometria.View
             this.Controls.Add(this.btnCarrega);
             this.Name = "Bimoetria";
             this.Text = "Bimoetria";
+            this.Load += new System.EventHandler(this.Bimoetria_Load);
             this.ResumeLayout(false);
 
         }

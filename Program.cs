@@ -16,7 +16,7 @@ namespace AcessoBiometria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.TelaDados());
+            Application.Run(new View.Login());
         }
     }
 }

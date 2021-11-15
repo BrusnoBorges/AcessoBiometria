@@ -70,9 +70,9 @@ namespace AcessoBiometria.View
             // dgvProducao
             // 
             this.dgvProducao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProducao.Location = new System.Drawing.Point(37, 26);
+            this.dgvProducao.Location = new System.Drawing.Point(6, 6);
             this.dgvProducao.Name = "dgvProducao";
-            this.dgvProducao.Size = new System.Drawing.Size(725, 368);
+            this.dgvProducao.Size = new System.Drawing.Size(756, 388);
             this.dgvProducao.TabIndex = 1;
             // 
             // tabNivel2

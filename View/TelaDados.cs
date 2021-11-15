@@ -13,7 +13,7 @@ namespace AcessoBiometria.View
 {
     public partial class TelaDados : Form
     {
-        int Nivel = 0;
+        public int Nivel = 0;
         Model.Model db = new Model.Model();
         
         public TelaDados()
@@ -44,15 +44,15 @@ namespace AcessoBiometria.View
 
         public void dgvProdLoad()  
         {
-            dgvProducao.DataSource = db.producaoagricola;
+            dgvProducao.DataSource = db.producaoagricola.ToList();
         }
         public void dgvFiscalLoad() 
         {
-            dgvFiscal.DataSource = db.fiscal;
+            dgvFiscal.DataSource = db.fiscal.ToList();
         }
         public void dgvAgroLoad() 
         {
-            dgvAgrotoxico.DataSource = db.agrotoxico;
+            dgvAgrotoxico.DataSource = db.agrotoxico.ToList();
         }
     }
 }

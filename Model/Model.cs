@@ -34,8 +34,7 @@ namespace AcessoBiometria.Model
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<biometria>()
-                .Property(e => e.biometria1)
-                .IsUnicode(false);
+                .Property(e => e.biometria1);
 
             modelBuilder.Entity<destino>()
                 .Property(e => e.Descricao)

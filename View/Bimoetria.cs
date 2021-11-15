@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AcessoBiometria.Controller;
+using AcessoBiometria.Model;
 
 namespace AcessoBiometria.View
 {
@@ -15,6 +16,8 @@ namespace AcessoBiometria.View
     {
         OpenFileDialog openFile = new OpenFileDialog();
         Biometria biometria = new Biometria();
+        Model.Model db = new Model.Model();
+        public int UserID { get; set; }
 
         public Bimoetria()
         {
@@ -23,7 +26,11 @@ namespace AcessoBiometria.View
 
         private void btnCarrega_Click(object sender, EventArgs e)
         {
-            biometria.Acesso(SelectFile(), SelectFile());
+            if(biometria.Acesso(SelectFile(), SelectFile()))
+            {
+                TelaDados telaDados = new TelaDados();                
+                telaDados.ShowDialog();
+            }
         }
 
         public string SelectFile()
@@ -38,6 +45,11 @@ namespace AcessoBiometria.View
                 return openFile.FileName;
             }
             return "";
+        }
+
+        private void Bimoetria_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
