@@ -9,18 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AcessoBiometria.Controller;
 
-namespace AcessoBiometria
+namespace AcessoBiometria.View
 {
-    public partial class Form1 : Form
+    public partial class Bimoetria : Form
     {
         OpenFileDialog openFile = new OpenFileDialog();
         Biometria biometria = new Biometria();
-        public Form1()
+
+        public Bimoetria()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCarrega_Click(object sender, EventArgs e)
         {
             biometria.Acesso(SelectFile(), SelectFile());
         }
@@ -34,7 +35,7 @@ namespace AcessoBiometria
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                return openFile.FileName;                
+                return openFile.FileName;
             }
             return "";
         }
