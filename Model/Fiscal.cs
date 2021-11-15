@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace AcessoBiometria.Model
 {
-    public  class Fiscal
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    [Table("biometria.fiscal")]
+    public partial class fiscal
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
         public int id { get; set; }
         public float InceRece { get; set; }
         public float ImposMuniPago { get; set; }

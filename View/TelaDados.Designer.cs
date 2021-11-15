@@ -31,18 +31,18 @@ namespace AcessoBiometria.View
         {
             this.Menu = new System.Windows.Forms.TabControl();
             this.tabNivel1 = new System.Windows.Forms.TabPage();
-            this.gdvProducao = new System.Windows.Forms.DataGridView();
+            this.dgvProducao = new System.Windows.Forms.DataGridView();
             this.tabNivel2 = new System.Windows.Forms.TabPage();
-            this.gdvFiscal = new System.Windows.Forms.DataGridView();
+            this.dgvFiscal = new System.Windows.Forms.DataGridView();
             this.tabNivel3 = new System.Windows.Forms.TabPage();
-            this.gdvAgrotoxico = new System.Windows.Forms.DataGridView();
+            this.dgvAgrotoxico = new System.Windows.Forms.DataGridView();
             this.Menu.SuspendLayout();
             this.tabNivel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvProducao)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducao)).BeginInit();
             this.tabNivel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvFiscal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFiscal)).BeginInit();
             this.tabNivel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvAgrotoxico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgrotoxico)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu
@@ -58,7 +58,7 @@ namespace AcessoBiometria.View
             // 
             // tabNivel1
             // 
-            this.tabNivel1.Controls.Add(this.gdvProducao);
+            this.tabNivel1.Controls.Add(this.dgvProducao);
             this.tabNivel1.Location = new System.Drawing.Point(4, 22);
             this.tabNivel1.Name = "tabNivel1";
             this.tabNivel1.Padding = new System.Windows.Forms.Padding(3);
@@ -67,17 +67,17 @@ namespace AcessoBiometria.View
             this.tabNivel1.Text = "Produção agrícola ";
             this.tabNivel1.UseVisualStyleBackColor = true;
             // 
-            // gdvProducao
+            // dgvProducao
             // 
-            this.gdvProducao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdvProducao.Location = new System.Drawing.Point(37, 26);
-            this.gdvProducao.Name = "gdvProducao";
-            this.gdvProducao.Size = new System.Drawing.Size(725, 368);
-            this.gdvProducao.TabIndex = 1;
+            this.dgvProducao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducao.Location = new System.Drawing.Point(37, 26);
+            this.dgvProducao.Name = "dgvProducao";
+            this.dgvProducao.Size = new System.Drawing.Size(725, 368);
+            this.dgvProducao.TabIndex = 1;
             // 
             // tabNivel2
             // 
-            this.tabNivel2.Controls.Add(this.gdvFiscal);
+            this.tabNivel2.Controls.Add(this.dgvFiscal);
             this.tabNivel2.Location = new System.Drawing.Point(4, 22);
             this.tabNivel2.Name = "tabNivel2";
             this.tabNivel2.Padding = new System.Windows.Forms.Padding(3);
@@ -86,17 +86,17 @@ namespace AcessoBiometria.View
             this.tabNivel2.Text = "Informações fiscais";
             this.tabNivel2.UseVisualStyleBackColor = true;
             // 
-            // gdvFiscal
+            // dgvFiscal
             // 
-            this.gdvFiscal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdvFiscal.Location = new System.Drawing.Point(6, 5);
-            this.gdvFiscal.Name = "gdvFiscal";
-            this.gdvFiscal.Size = new System.Drawing.Size(756, 391);
-            this.gdvFiscal.TabIndex = 1;
+            this.dgvFiscal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFiscal.Location = new System.Drawing.Point(6, 5);
+            this.dgvFiscal.Name = "dgvFiscal";
+            this.dgvFiscal.Size = new System.Drawing.Size(756, 391);
+            this.dgvFiscal.TabIndex = 1;
             // 
             // tabNivel3
             // 
-            this.tabNivel3.Controls.Add(this.gdvAgrotoxico);
+            this.tabNivel3.Controls.Add(this.dgvAgrotoxico);
             this.tabNivel3.Location = new System.Drawing.Point(4, 22);
             this.tabNivel3.Name = "tabNivel3";
             this.tabNivel3.Padding = new System.Windows.Forms.Padding(3);
@@ -105,13 +105,13 @@ namespace AcessoBiometria.View
             this.tabNivel3.Text = "Agrotóxicos";
             this.tabNivel3.UseVisualStyleBackColor = true;
             // 
-            // gdvAgrotoxico
+            // dgvAgrotoxico
             // 
-            this.gdvAgrotoxico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdvAgrotoxico.Location = new System.Drawing.Point(6, 3);
-            this.gdvAgrotoxico.Name = "gdvAgrotoxico";
-            this.gdvAgrotoxico.Size = new System.Drawing.Size(756, 391);
-            this.gdvAgrotoxico.TabIndex = 0;
+            this.dgvAgrotoxico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAgrotoxico.Location = new System.Drawing.Point(6, 3);
+            this.dgvAgrotoxico.Name = "dgvAgrotoxico";
+            this.dgvAgrotoxico.Size = new System.Drawing.Size(756, 391);
+            this.dgvAgrotoxico.TabIndex = 0;
             // 
             // TelaDados
             // 
@@ -124,11 +124,11 @@ namespace AcessoBiometria.View
             this.Load += new System.EventHandler(this.TelaDados_Load);
             this.Menu.ResumeLayout(false);
             this.tabNivel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gdvProducao)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducao)).EndInit();
             this.tabNivel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gdvFiscal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFiscal)).EndInit();
             this.tabNivel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gdvAgrotoxico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgrotoxico)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,10 +137,10 @@ namespace AcessoBiometria.View
 
         private System.Windows.Forms.TabControl Menu;
         private System.Windows.Forms.TabPage tabNivel1;
-        private System.Windows.Forms.DataGridView gdvProducao;
+        private System.Windows.Forms.DataGridView dgvProducao;
         private System.Windows.Forms.TabPage tabNivel2;
-        private System.Windows.Forms.DataGridView gdvFiscal;
+        private System.Windows.Forms.DataGridView dgvFiscal;
         private System.Windows.Forms.TabPage tabNivel3;
-        private System.Windows.Forms.DataGridView gdvAgrotoxico;
+        private System.Windows.Forms.DataGridView dgvAgrotoxico;
     }
 }

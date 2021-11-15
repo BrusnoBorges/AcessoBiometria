@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AcessoBiometria.Model;
 
 namespace AcessoBiometria.View
 {
     public partial class TelaDados : Form
     {
         int Nivel = 0;
+        Model.Model db = new Model.Model();
+        
         public TelaDados()
         {
             InitializeComponent();
@@ -39,14 +42,17 @@ namespace AcessoBiometria.View
             }
         }
 
-        public void dgvProdLoad() 
+        public void dgvProdLoad()  
         {
+            dgvProducao.DataSource = db.producaoagricola;
         }
         public void dgvFiscalLoad() 
         {
+            dgvFiscal.DataSource = db.fiscal;
         }
         public void dgvAgroLoad() 
         {
+            dgvAgrotoxico.DataSource = db.agrotoxico;
         }
     }
 }
