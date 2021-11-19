@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using XnaFan.ImageComparison;
 using AcessoBiometria.Model;
+using OpenCvSharp;
 
 namespace AcessoBiometria.Controller
 {
@@ -14,9 +15,9 @@ namespace AcessoBiometria.Controller
         string imgEnviada;
         string imgCompare;
 
-        public bool Acesso(string caminho, string caminho2)
+        public bool Acesso(byte[] bioAnalise, byte[] bioModelo)
         {                     
-            return Compara(caminho, caminho2);
+            return Compara(bioAnalise, bioModelo);
         }
 
         public bool Cadastro(string caminho)
@@ -25,14 +26,21 @@ namespace AcessoBiometria.Controller
         }
 
 
-        private bool Compara(string caminho, string caminho2)
+        private bool Compara(byte[] bioAnalise, byte[] bioModelo)
         {
-            Image img1 = Image.FromFile(caminho);
-            Image img2 = Image.FromFile(caminho2);
+            //Cv2.CompareHist(caminho, caminho2);
 
-            float dife = ImageTool.GetPercentageDifference(caminho, caminho, 3);
 
-            return dife == 0 ? false : true;
+            //float dife = ImageTool.GetPercentageDifference(caminho, caminho2);
+
+            //return dife == 0 ? false : true;
+
+            if (bioAnalise.SequenceEqual(bioModelo))
+            {
+                return true;
+            }
+            return false;
+
         }
         
     }

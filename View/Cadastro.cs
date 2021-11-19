@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OpenCvSharp;
 
 namespace AcessoBiometria.View
 {
@@ -26,7 +27,7 @@ namespace AcessoBiometria.View
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtLogin.Text) || string.IsNullOrEmpty(txtSenha.Text))
+            if (string.IsNullOrEmpty(txtLogin.Text) || string.IsNullOrEmpty(txtSenha.Text) || string.IsNullOrEmpty(txtBio.Text))
             {
                 return;
             }
@@ -48,13 +49,15 @@ namespace AcessoBiometria.View
                     db.usuario.Add(user);
                     db.SaveChanges();
 
+                    this.Close();
                 }
+
             }
         }
 
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
-            bio.biometria1 = SelectFile();
+            bio.biometria1 = SelectFile();            
             txtBio.Text = fileWay;
         }
 
@@ -68,12 +71,24 @@ namespace AcessoBiometria.View
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                FileInfo arqImagem = new FileInfo(openFile.FileName);
-                float tamanhoArquivoImagem = arqImagem.Length;
-                FileStream fs = new FileStream(openFile.FileName, FileMode.Open, FileAccess.Read, FileShare.Read);
-                img = new byte[Convert.ToInt32(tamanhoArquivoImagem)];
+                //FileInfo arqImagem = new FileInfo(openFile.FileName);
+                //float tamanhoArquivoImagem = arqImagem.Length;
+                //FileStream fs = new FileStream(openFile.FileName, FileMode.Open, FileAccess.Read, FileShare.Read);
+                //img = new byte[Convert.ToInt32(tamanhoArquivoImagem)];
+                //fileWay = openFile.FileName;
+                
+
+                string FileName = openFile.FileName;
                 fileWay = openFile.FileName;
-                return img;
+                byte[] ImageData;
+                FileStream fs = new FileStream(FileName, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                ImageData = br.ReadBytes((int)fs.Length);
+                pictureBox1.Image = Image.FromFile(openFile.FileName);
+                br.Close();
+                fs.Close();
+
+                return ImageData;
             }
             return new byte[0];
         }
@@ -98,6 +113,9 @@ namespace AcessoBiometria.View
             }
         }
 
-        
+        private void Cadastro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

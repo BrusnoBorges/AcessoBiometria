@@ -19,6 +19,6 @@ namespace AcessoBiometria.Model
         [StringLength(60)]
         public string Senha { get; set; }
         public int Biometria_id { get; set; }
-        public virtual agrotoxico agrotoxico { get; set; }
+        public virtual biometria Biometria { get; set; }
     }
 }

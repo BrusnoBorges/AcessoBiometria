@@ -48,6 +48,7 @@ namespace AcessoBiometria.View
             // 
             this.txtSenha.Location = new System.Drawing.Point(70, 52);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(120, 20);
             this.txtSenha.TabIndex = 1;
             // 
@@ -101,6 +102,7 @@ namespace AcessoBiometria.View
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtLogin);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);

@@ -37,9 +37,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Emgu.CV.Platform.NetStandard, Version=4.5.4.4788, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
-      <HintPath>packages\Emgu.CV.4.5.4.4788\lib\netstandard2.0\Emgu.CV.Platform.NetStandard.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>

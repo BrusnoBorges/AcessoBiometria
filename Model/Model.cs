@@ -25,16 +25,16 @@ namespace AcessoBiometria.Model
         {
             modelBuilder.Entity<agrotoxico>()
                 .Property(e => e.Nome)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<agrotoxico>()
-                .HasMany(e => e.usuario)
-                .WithRequired(e => e.agrotoxico)
-                .HasForeignKey(e => e.Biometria_id)
-                .WillCascadeOnDelete(false);
+                .IsUnicode(false);       
 
             modelBuilder.Entity<biometria>()
                 .Property(e => e.biometria1);
+
+            modelBuilder.Entity<biometria>()
+                .HasMany(e => e.usuario)
+                .WithRequired(e => e.Biometria)
+                .HasForeignKey(e => e.Biometria_id)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<destino>()
                 .Property(e => e.Descricao)

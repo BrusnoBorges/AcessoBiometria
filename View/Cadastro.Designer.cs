@@ -38,15 +38,17 @@ namespace AcessoBiometria.View
             this.txtBio = new System.Windows.Forms.TextBox();
             this.btnSelecionar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnGeral = new System.Windows.Forms.RadioButton();
-            this.rbtnDiretor = new System.Windows.Forms.RadioButton();
             this.rbtnMinistro = new System.Windows.Forms.RadioButton();
+            this.rbtnDiretor = new System.Windows.Forms.RadioButton();
+            this.rbtnGeral = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(95, 190);
+            this.btnSalvar.Location = new System.Drawing.Point(322, 223);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(95, 23);
             this.btnSalvar.TabIndex = 11;
@@ -105,7 +107,7 @@ namespace AcessoBiometria.View
             // 
             // btnSelecionar
             // 
-            this.btnSelecionar.Location = new System.Drawing.Point(15, 190);
+            this.btnSelecionar.Location = new System.Drawing.Point(15, 223);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(75, 23);
             this.btnSelecionar.TabIndex = 14;
@@ -118,34 +120,12 @@ namespace AcessoBiometria.View
             this.groupBox1.Controls.Add(this.rbtnMinistro);
             this.groupBox1.Controls.Add(this.rbtnDiretor);
             this.groupBox1.Controls.Add(this.rbtnGeral);
-            this.groupBox1.Location = new System.Drawing.Point(71, 84);
+            this.groupBox1.Location = new System.Drawing.Point(298, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(119, 100);
+            this.groupBox1.Size = new System.Drawing.Size(119, 84);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
-            // 
-            // rbtnGeral
-            // 
-            this.rbtnGeral.AutoSize = true;
-            this.rbtnGeral.Location = new System.Drawing.Point(6, 19);
-            this.rbtnGeral.Name = "rbtnGeral";
-            this.rbtnGeral.Size = new System.Drawing.Size(50, 17);
-            this.rbtnGeral.TabIndex = 16;
-            this.rbtnGeral.TabStop = true;
-            this.rbtnGeral.Text = "Geral";
-            this.rbtnGeral.UseVisualStyleBackColor = true;
-            // 
-            // rbtnDiretor
-            // 
-            this.rbtnDiretor.AutoSize = true;
-            this.rbtnDiretor.Location = new System.Drawing.Point(6, 42);
-            this.rbtnDiretor.Name = "rbtnDiretor";
-            this.rbtnDiretor.Size = new System.Drawing.Size(56, 17);
-            this.rbtnDiretor.TabIndex = 17;
-            this.rbtnDiretor.TabStop = true;
-            this.rbtnDiretor.Text = "Diretor";
-            this.rbtnDiretor.UseVisualStyleBackColor = true;
             // 
             // rbtnMinistro
             // 
@@ -158,11 +138,42 @@ namespace AcessoBiometria.View
             this.rbtnMinistro.Text = "Ministro";
             this.rbtnMinistro.UseVisualStyleBackColor = true;
             // 
+            // rbtnDiretor
+            // 
+            this.rbtnDiretor.AutoSize = true;
+            this.rbtnDiretor.Location = new System.Drawing.Point(6, 42);
+            this.rbtnDiretor.Name = "rbtnDiretor";
+            this.rbtnDiretor.Size = new System.Drawing.Size(56, 17);
+            this.rbtnDiretor.TabIndex = 17;
+            this.rbtnDiretor.TabStop = true;
+            this.rbtnDiretor.Text = "Diretor";
+            this.rbtnDiretor.UseVisualStyleBackColor = true;
+            // 
+            // rbtnGeral
+            // 
+            this.rbtnGeral.AutoSize = true;
+            this.rbtnGeral.Location = new System.Drawing.Point(6, 19);
+            this.rbtnGeral.Name = "rbtnGeral";
+            this.rbtnGeral.Size = new System.Drawing.Size(50, 17);
+            this.rbtnGeral.TabIndex = 16;
+            this.rbtnGeral.TabStop = true;
+            this.rbtnGeral.Text = "Geral";
+            this.rbtnGeral.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(15, 94);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(402, 123);
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 231);
+            this.ClientSize = new System.Drawing.Size(429, 258);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.txtBio);
@@ -174,8 +185,10 @@ namespace AcessoBiometria.View
             this.Controls.Add(this.txtLogin);
             this.Name = "Cadastro";
             this.Text = "Cadastro";
+            this.Load += new System.EventHandler(this.Cadastro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +208,6 @@ namespace AcessoBiometria.View
         private System.Windows.Forms.RadioButton rbtnMinistro;
         private System.Windows.Forms.RadioButton rbtnDiretor;
         private System.Windows.Forms.RadioButton rbtnGeral;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

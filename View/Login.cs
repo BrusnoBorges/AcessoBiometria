@@ -27,7 +27,7 @@ namespace AcessoBiometria.View
             if (VerificaLogin(txtLogin.Text, txtSenha.Text))
             {
                 View.Bimoetria bio = new Bimoetria();
-                bio.UserID = db.usuario.Where(d => d.Login == txtLogin.Text && d.Senha == txtSenha.Text).LastOrDefault().id;
+                bio.UserID = db.usuario.FirstOrDefault(d => d.Login == txtLogin.Text && d.Senha == txtSenha.Text).Biometria_id;
                 bio.ShowDialog();                
             }
         }
@@ -39,7 +39,7 @@ namespace AcessoBiometria.View
 
         public bool VerificaLogin(string Login, string Senha)
         {
-            return db.usuario.Where(d => d.Login == txtLogin.Text && d.Senha == txtSenha.Text) == null ? false : true;
+            return db.usuario.FirstOrDefault(d => d.Login == txtLogin.Text && d.Senha == txtSenha.Text) == null ? false : true;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
