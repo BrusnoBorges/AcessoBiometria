@@ -48,7 +48,7 @@ namespace AcessoBiometria.View
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(322, 223);
+            this.btnSalvar.Location = new System.Drawing.Point(322, 308);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(95, 23);
             this.btnSalvar.TabIndex = 11;
@@ -78,14 +78,14 @@ namespace AcessoBiometria.View
             // 
             this.txtSenha.Location = new System.Drawing.Point(70, 32);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(120, 20);
+            this.txtSenha.Size = new System.Drawing.Size(222, 20);
             this.txtSenha.TabIndex = 7;
             // 
             // txtLogin
             // 
             this.txtLogin.Location = new System.Drawing.Point(70, 6);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(120, 20);
+            this.txtLogin.Size = new System.Drawing.Size(222, 20);
             this.txtLogin.TabIndex = 6;
             // 
             // label3
@@ -102,12 +102,12 @@ namespace AcessoBiometria.View
             this.txtBio.Location = new System.Drawing.Point(70, 58);
             this.txtBio.Name = "txtBio";
             this.txtBio.ReadOnly = true;
-            this.txtBio.Size = new System.Drawing.Size(120, 20);
+            this.txtBio.Size = new System.Drawing.Size(222, 20);
             this.txtBio.TabIndex = 13;
             // 
             // btnSelecionar
             // 
-            this.btnSelecionar.Location = new System.Drawing.Point(15, 223);
+            this.btnSelecionar.Location = new System.Drawing.Point(15, 308);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(75, 23);
             this.btnSelecionar.TabIndex = 14;
@@ -164,7 +164,8 @@ namespace AcessoBiometria.View
             // 
             this.pictureBox1.Location = new System.Drawing.Point(15, 94);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(402, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(402, 208);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
@@ -172,7 +173,7 @@ namespace AcessoBiometria.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 258);
+            this.ClientSize = new System.Drawing.Size(429, 343);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSelecionar);

@@ -62,6 +62,7 @@ namespace AcessoBiometria.View
             this.imgBio.Location = new System.Drawing.Point(12, 12);
             this.imgBio.Name = "imgBio";
             this.imgBio.Size = new System.Drawing.Size(330, 235);
+            this.imgBio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgBio.TabIndex = 2;
             this.imgBio.TabStop = false;
             // 
@@ -71,6 +72,7 @@ namespace AcessoBiometria.View
             this.pictureBox1.Location = new System.Drawing.Point(357, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(330, 235);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
