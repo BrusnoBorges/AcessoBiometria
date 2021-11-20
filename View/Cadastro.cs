@@ -29,6 +29,7 @@ namespace AcessoBiometria.View
         {
             if (string.IsNullOrEmpty(txtLogin.Text) || string.IsNullOrEmpty(txtSenha.Text) || string.IsNullOrEmpty(txtBio.Text))
             {
+                MessageBox.Show("Parametrôs invalidos");
                 return;
             }
             else
@@ -71,13 +72,6 @@ namespace AcessoBiometria.View
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
-                //FileInfo arqImagem = new FileInfo(openFile.FileName);
-                //float tamanhoArquivoImagem = arqImagem.Length;
-                //FileStream fs = new FileStream(openFile.FileName, FileMode.Open, FileAccess.Read, FileShare.Read);
-                //img = new byte[Convert.ToInt32(tamanhoArquivoImagem)];
-                //fileWay = openFile.FileName;
-                
-
                 string FileName = openFile.FileName;
                 fileWay = openFile.FileName;
                 byte[] ImageData;

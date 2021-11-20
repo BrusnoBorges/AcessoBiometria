@@ -28,13 +28,6 @@ namespace AcessoBiometria.Controller
 
         private bool Compara(byte[] bioAnalise, byte[] bioModelo)
         {
-            //Cv2.CompareHist(caminho, caminho2);
-
-
-            //float dife = ImageTool.GetPercentageDifference(caminho, caminho2);
-
-            //return dife == 0 ? false : true;
-
             if (bioAnalise.SequenceEqual(bioModelo))
             {
                 return true;
